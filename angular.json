@@ -98,9 +98,31 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "university-app:build:production",
+            "firebaseProject": "university-app-86820",
+            "firebaseHostingSite": "university-app-86820"
+          }
         }
       }
     }
   },
-  "defaultProject": "university-app"
+  "defaultProject": "university-app",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

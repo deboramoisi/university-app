@@ -2,7 +2,7 @@
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 .short-info {
@@ -15,15 +15,17 @@
 }
 
 .biography {
+    display: flex;
+    flex-direction: column;
     width: 30vw;
-    min-height: 90vh;
+    height: 90vh;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border: 1px solid #EEEEEE;
 }
 
 .biography ul {
-    padding: 25px 20px 30px;
+    padding: 25px 20px;
     margin: 0;
     list-style-type: none;
 }
@@ -54,13 +56,24 @@
 }
 
 .my-photo {
-    background: url(../../assets/Me.jpeg) bottom center no-repeat;
+    background: url(../../assets/Me.jpeg) center no-repeat;
     background-size: contain;
     min-height: 60%;
 }
 
 fa-icon {
     margin-right: 3%;
+}
+
+@media all and (min-width: 801px) and (max-width: 1800px) {
+    .container {
+        margin-bottom: 15%;
+    }
+
+    button, .three-column {
+        height: 35%;
+        margin-right: 2%;
+    }
 }
 
 @media all and (max-width: 800px) {
@@ -82,15 +95,71 @@ fa-icon {
     }
 
     .three-column {
-        margin-right: 15%;
+        flex-direction: column wrap;
     }
 
     button {
-        height: 15vh;
+        height: 25vh;
     }
 
     .my-photo {
         min-height: 70%;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .biography ul {
+        overflow: scroll;
+        margin-bottom: 10%;
+    }
+
+    .columns-container {
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .two-column {
+        width: 80vw;
+    }
+
+    .three-column {
+        margin-bottom: 1%;
+    }
+
+    button {
+        width: 80vw;
+        height: 10vh;
+    }
+}
+
+@media all and (min-width: 601px) and (max-width: 799px) {
+    .three-column {
+        height: 30%;
+        margin-right: 10%;
+    }
+}
+
+@media all and (min-width: 321px) and (max-width: 600px) {
+    .columns-container {
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .two-column {
+        width: 80vw;
+    }
+
+    .three-column {
+        margin-bottom: 1%;
+    }
+
+    button {
+        width: 80vw;
+        height: 10vh;
+    }
+
+    .biography ul {
+        overflow: scroll;
     }
 }
 

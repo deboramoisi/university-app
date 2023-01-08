@@ -12,6 +12,11 @@ import { HomeComponent } from './home/home.component';
 import { ReusableHeaderComponent } from './components/reusable-header/reusable-header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PortofolioCardComponent } from './components/portofolio-card/portofolio-card.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ResumeComponent } from './resume/resume.component';
+import { ResumeTimelineCardComponent } from './components/resume-timeline-card/resume-timeline-card.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +29,16 @@ import { PortofolioCardComponent } from './components/portofolio-card/portofolio
     HomeComponent,
     ReusableHeaderComponent,
     NavbarComponent,
-    PortofolioCardComponent
+    PortofolioCardComponent,
+    ResumeComponent,
+    ResumeTimelineCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]

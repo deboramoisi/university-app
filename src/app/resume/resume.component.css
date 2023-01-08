@@ -1,0 +1,14 @@
+.resume-container {
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 10%;
+}
+
+.resume-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.resume {
+    position: relative;
+}

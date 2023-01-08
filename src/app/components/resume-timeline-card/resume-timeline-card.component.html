@@ -1,0 +1,17 @@
+<div class="timeline-inverted">
+    <div *ngIf="position == 'left'" class="timeline-content left">
+        <span class="move-date">{{postedDate}}</span>
+        <h3>{{title}}</h3>
+        <span><strong>{{profile}}</strong></span>
+        <p>{{organization}}</p>
+    </div>
+    <div class="posted-date vl" [ngClass]="{'left-date': position == 'right', 'right-date': position == 'left'}">
+        <span class="vr">{{startDate}}</span>-{{endDate}}
+    </div>
+    <div *ngIf="position == 'right'" class="timeline-content right">
+        <span class="move-date">{{postedDate}}</span>
+        <h3>{{title}}</h3>
+        <span><strong>{{profile}}</strong></span>
+        <p>{{organization}}</p>
+    </div>
+</div>
