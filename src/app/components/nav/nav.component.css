@@ -1,0 +1,53 @@
+/* Large Screens */
+.nav {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px cornsilk solid;
+}
+
+.nav-double-line {
+    width: 98vw;
+    height: 0.2vh;
+    margin-top: 5px;
+    background-color: cornsilk;
+}
+
+/* Mediume Screens */
+@media all and (max-width: 800px) {
+    .nav {
+        justify-content: space-around;
+    }
+}
+
+/* Small Screens */
+@media all and (max-width: 500px) {
+    .nav {
+        flex-direction: column;
+    }
+}
+
+.nav-logo {
+    padding-right: 3%; 
+    font-family: 'Pacifico', cursive;
+    text-transform: capitalize;
+    font-weight: 400;
+} 
+
+.nav-item {
+    padding-right: 3%;
+}
+
+.nav-item:hover {
+    color: rgb(96, 92, 223);
+    cursor: pointer;
+}
+
+.active {   
+    color: rgb(69, 65, 192);
+}

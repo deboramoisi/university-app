@@ -1,0 +1,42 @@
+<app-reusable-header title="Get in touch"></app-reusable-header>
+<div class="contact-body">
+    <div class="contact-form">
+        <div class="contact-title">SEND ME A MESSAGE</div>
+        <form class="contact-form">
+            <div class="contact-input">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" >
+            </div>
+            <div class="contact-input">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" >
+            </div>
+            <div class="contact-input">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" >
+            </div>
+            <div class="contact-input">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="submit-button">
+                <button type="submit">Send message</button>
+            </div>
+        </form>
+    </div>
+    <div class="contact-info">
+        <div class="contact-address">
+            <fa-icon class="icon" [icon]="mapMarker"></fa-icon>
+            <span class="details-title">ADDRESS</span>
+            <span class="details">
+                Str. Teodor Mihali, Nr. 58-60
+                Campus FSEGA, Room F109, Cluj-Napoca 400591, Cluj, Romania
+            </span>
+        </div>
+        <div class="contact-phone">
+            <fa-icon class="icon" [icon]="mobile"></fa-icon>
+            <span class="details-title">PHONE NUMBER</span>
+            <span class="details">(+40) 256 111-111</span>
+        </div>   
+    </div> 
+</div>

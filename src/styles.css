@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    height: 7vh;
+    min-width: 11vw;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    color: white;
+    background-color: #68c3a3;
+    border: 0px;
+    text-transform: uppercase;
+}
+
+.red-button {
+    background-color: rgb(237, 88, 88);
+}
+
+.blue-button {
+    background-color: rgb(114, 114, 213);
+}

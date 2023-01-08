@@ -1,0 +1,56 @@
+.portofolio-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    width: 20vw;
+    margin: 3%;
+}
+
+.portofolio-card:hover {
+    cursor: pointer;
+    opacity: 0.5;    
+}
+
+.portofolio-title {
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 22px;
+    margin-bottom: 0;
+    color: rgb(70, 128, 183);
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.portofolio-image {
+    position: relative;
+    opacity: 0.7;
+    max-width: 17vw;
+    max-height: 20vh;
+    margin-bottom: 5%;
+}
+
+.portofolio-card:hover .portofolio-icon {
+    display: block;
+    opacity: 1;
+}
+
+.portofolio-icon {
+    position: absolute;
+    display: none;
+    opacity: 1;
+}
+
+fa-icon {
+    font-size: 30px;
+}
+
+@media all and (max-width: 700px) {
+    .portofolio-card {
+        width: 90vw;
+    }
+}

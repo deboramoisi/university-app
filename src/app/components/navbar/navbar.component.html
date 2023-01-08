@@ -1,0 +1,23 @@
+<div class="top-nav">
+    <div class="nav-logo" routerLink="./">
+      Moisi Olivia-Debora
+    </div>
+    <input id="menu-toggle" type="checkbox">
+    <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+    </label>
+    <ul class="menu">
+      <li routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Home
+      </li>
+      <li routerLink="about" routerLinkActive="active">
+        About
+      </li>
+      <li routerLink="teaching" routerLinkActive="active">
+        Teaching
+      </li>
+      <li routerLink="contact" routerLinkActive="active">
+        Contact
+      </li>
+    </ul>
+</div>
