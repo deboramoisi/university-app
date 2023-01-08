@@ -1,9 +1,81 @@
 <app-reusable-header title="My Teaching"></app-reusable-header>
-<div class="container">
-    <app-portofolio-card title="programare i" subtitle="(C programming)" image="../../assets/ubb-logo.svg"></app-portofolio-card>
-    <app-portofolio-card title="programare ii" subtitle="(Python programming)" image="../../assets/ubb-logo.svg"></app-portofolio-card>
-    <app-portofolio-card title="programare iii" subtitle="(C# programming)" image="../../assets/ubb-logo.svg"></app-portofolio-card>
-    <app-portofolio-card title="soa" image="../../assets/ubb-logo.svg"></app-portofolio-card>
-    <app-portofolio-card title="soa" image="../../assets/ubb-logo.svg"></app-portofolio-card>
-    <app-portofolio-card title="soa" image="../../assets/ubb-logo.svg"></app-portofolio-card>
-</div>
+<section>
+    <div class="container">
+        <app-portofolio-card (click)="scroll(details, 'Java Programming')" 
+            title="programare i" subtitle="(Java programming)" image="../../assets/ubb-logo.svg" image_alt="UBB logo"></app-portofolio-card>
+        <app-portofolio-card (click)="scroll(details, 'Python Programming')" 
+            title="programare ii" subtitle="(Python programming)" image="../../assets/ubb-logo.svg" image_alt="UBB logo"></app-portofolio-card>
+        <app-portofolio-card (click)="scroll(details, 'C# Programming')"
+            title="programare iii" subtitle="(C# programming)" image="../../assets/ubb-logo.svg" image_alt="UBB logo"></app-portofolio-card>
+        <app-portofolio-card (click)="scroll(details, 'SOA')" 
+            title="SOA" image="../../assets/ubb-logo.svg" image_alt="UBB logo"></app-portofolio-card>
+        <app-portofolio-card (click)="scroll(details, '.NET')"
+            title=".NET" image="../../assets/utcn_logo.jpg" image_alt="UTCN logo"></app-portofolio-card>
+        <app-portofolio-card (click)="scroll(details, 'SOA')" 
+            title="SOA" image="../../assets/utcn_logo.jpg" image_alt="UTCN logo"></app-portofolio-card>
+    </div>
+
+    <app-reusable-header title="details"></app-reusable-header>
+    <p *ngIf="course === 'default'" class="margin-left">No course selected</p>
+
+    <div #details class="details-container" [ngClass]="{hide: course === 'default'}">
+        <div class="short-description">
+            <ul>
+                <li><strong>Curs: </strong>{{course}}</li>
+                <li><strong>Profesor: </strong>Olivia-Debora MOISI</li>
+                <li><strong>Adresa: </strong>Str. Teodor Mihali, Nr. 58-60
+                    Campus FSEGA, Room F109, Cluj-Napoca 400591, Cluj, Romania</li>
+                <li><strong>Office phone: </strong>(+40) 256 111-111</li>
+                <li><strong>Email: </strong>olivia.moisi@ubbcluj.ro</li>
+                <li><strong>Ore de laborator: </strong>Mi, 08:00 am – 01:00 pm, online</li>
+                <li><strong>Consultatii* (online): </strong>
+                    <p>Miercuri: 06:00 pm - 08:00 pm;</p>
+                    <p>Vineri: 04:20 pm - 05:50 pm;</p>
+                    <p>*sau prin programare prin e-mail.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="info">
+            <h1>OBIECTIVELE GENERALE ALE CURSULUI</h1>
+            <ol>
+                <li>Deprinderea sintaxei limbajului Java şi construirea de programe folosind limbajul Java.</li>
+                <li>Dezvoltarea capabilităţilor în vederea proiectării orientate obiect a aplicaţiilor</li>
+            </ol>
+
+            <h1>NOTAREA STUDENTILOR</h1>
+            <p>Nota finală a cursului este determinată după cum urmează*:</p>
+            <section class="columns-container">
+                <div class="two-column">
+                    <p><fa-icon [icon]="checkIcon"></fa-icon>45% - Examen scris în sesiune (C)</p>
+                    <p><fa-icon [icon]="checkIcon"></fa-icon>5% - Teste scurte (C)</p>
+                    <p><fa-icon [icon]="checkIcon"></fa-icon>25% - Test practic (L)</p>
+                </div>
+                <div class="two-column">
+                    <p><fa-icon [icon]="checkIcon"></fa-icon>5% - Activitate în timpul semestrului (L)</p>
+                    <p><fa-icon [icon]="checkIcon"></fa-icon>10% - Teme</p>
+                </div>
+            </section>
+            <p><strong>*BONUS</strong> Rezolvarea exercițiilor suplimentare în cadrul activității de laborator din timpul semestrului este notată cu 10% și contribuie la îmbunătățirea notei oferite la activitatea practică!</p>    
+        </div>
+    </div>
+</section>
+
+<section *ngIf="course !== 'default'" class="last-details">
+    <p><strong>Politica sarcinilor întârziate*:</strong></p>
+    <p>Managementul timpului este o parte provocatoare a vieții de student. Știu că sunteți ocupați și aveți alte obligații, cursuri etc. 
+        Totuși, din respect pentru obiectivele acestui curs și timpul petrecut împreună, este important să vă predați munca la timp. 
+        În cazul în care aveți nevoie să transmiteți oricare dintre sarcinile voastre după termenul limită, voi aplica următoarea penalizare la notare:</p>
+    <ol>
+        <li>între 1 - 24 de ore (1 zi) întârziere: -1 punct</li>
+        <li>între 24 - 48 de ore (2 zile) întârziere: -1.5 puncte</li>
+        <li>între 48 - 72 de ore (3 zile) întârziere: -2 puncte</li>
+        <li>Mai mult de 72 de ore întârziere: -2.5 puncte</li>
+    </ol><br>
+
+    <p><strong>Prezență:</strong></p>
+    <p>Este foarte important să intenționați să participați la toate sesiunile de laborator/ curs. 
+        Dacă ratați un curs/ laborator, este responsabilitatea voastră să consultați cursul online, rețineți că aveți voie să ratați 4 laboratoare fără penalizare. 
+        Întâlnirile de laborator sunt locul în care vom pune în practică noțiunile teoretice studiate la curs. 
+        Deoarece activitatea de laborator este oarecum motivată de întrebări și preocupări ale studenților, nu există nicio garanție că vor fi acoperite cu aceleași datalii sarcinile publicate în clasa virtuală de lucru. 
+        Prin urmare, este necesară prezența și este un factor important pentru a înțelege în detaliu disciplina studiată.</p>
+</section>

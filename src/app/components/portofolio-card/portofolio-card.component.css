@@ -51,6 +51,12 @@ fa-icon {
 
 @media all and (max-width: 700px) {
     .portofolio-card {
-        width: 90vw;
+        width: 70vw; 
+    }
+}
+
+@media all and (min-width: 701px) and (max-width: 1000px) {
+    .portofolio-card {
+        width: 25vw;
     }
 }
